@@ -44,7 +44,7 @@ export const navLinks = [
 ]
 
 export const about = {
-  text: 'I am currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence from Maharana Pratap Engineering College, Kanpur. I am interested in software development, web development, problem-solving, and building practical applications. I work with Java, Python, JavaScript, React, SQL, and modern web technologies. I enjoy learning by building real projects and continuously improving my technical and communication skills.',
+  text: 'My project work focuses on turning practical requirements into useful software. I developed a responsive website for Rama Technical Institute, including course discovery, online admissions, and administration features. During my internship at Pinnacle Labs, I contributed to UI improvements, bug fixes, and responsive layouts. I am completing my B.Tech in Computer Science and Engineering (Artificial Intelligence) and am looking for opportunities to contribute to a collaborative software engineering team.',
   facts: [
     { label: 'Program', value: 'B.Tech CSE' },
     { label: 'Status', value: '4th Year' },
