@@ -10,17 +10,6 @@ export default function About() {
         <SectionHead eyebrow="About" title="A little about me" />
 
         <div className="about-grid">
-          <Reveal className="about-photo-wrap">
-            <img
-              src="/images/profile-portrait.jpg"
-              alt="Gunjan Gupta"
-              className="about-photo"
-              width={720}
-              height={900}
-              loading="lazy"
-            />
-          </Reveal>
-
           <Reveal delay={100} className="about-main">
             <p className="about-text">{about.text}</p>
 
