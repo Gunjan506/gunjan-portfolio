@@ -1,0 +1,48 @@
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.ach-grid > li,
+.ach-reveal,
+.ach-card {
+  height: 100%;
+}
+.ach-card {
+  padding: 24px;
+}
+.ach-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 11px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.ach-category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--faint);
+  margin-bottom: 6px;
+}
+.ach-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.ach-detail {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1040px) {
+  .ach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .ach-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

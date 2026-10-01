@@ -1,0 +1,117 @@
+.skills-shell {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.skills-tabs {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 4px;
+  background: var(--bg-soft);
+  border-right: 1px solid var(--border);
+}
+
+.skills-tab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 13px 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.skills-tab:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.skills-tab[aria-selected='true'] {
+  background: var(--surface);
+  border-color: var(--accent-line);
+  color: var(--text);
+}
+.skills-tab[aria-selected='true'] svg {
+  color: var(--accent);
+}
+.skills-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--faint);
+}
+
+.skills-panel {
+  padding: 40px 42px;
+  min-height: 300px;
+  animation: rise 0.4s ease both;
+}
+.skills-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.skills-panel > p {
+  max-width: 460px;
+}
+
+.skills-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.skill-badge {
+  padding: 10px 16px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text);
+  animation: rise 0.45s ease both;
+  animation-delay: calc(var(--i) * 45ms);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+.skill-badge:hover {
+  border-color: var(--accent-line);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 860px) {
+  .skills-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .skills-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    scrollbar-width: none;
+  }
+  .skills-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .skills-tab {
+    width: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .skills-count {
+    display: none;
+  }
+  .skills-panel {
+    padding: 28px 22px 32px;
+    min-height: 0;
+  }
+}

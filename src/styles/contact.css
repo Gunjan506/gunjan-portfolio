@@ -1,0 +1,120 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 64px;
+  align-items: start;
+}
+.contact-intro h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.contact-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 30px;
+}
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--faint);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 0;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.contact-submit {
+  align-self: flex-start;
+}
+.contact-status {
+  min-height: 1.4em;
+  font-size: 0.88rem;
+}
+.contact-status.sent {
+  color: var(--ok);
+}
+.contact-status.error,
+.contact-status.unconfigured {
+  color: var(--danger);
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 44px;
+  }
+}
+@media (max-width: 520px) {
+  .field-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contact-form {
+    padding: 22px 18px;
+  }
+  .contact-submit {
+    width: 100%;
+  }
+}

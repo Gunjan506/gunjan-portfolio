@@ -1,0 +1,30 @@
+.exp-timeline {
+  max-width: 820px;
+}
+.exp-card {
+  padding: 30px;
+}
+.exp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.exp-head h3 {
+  font-size: 1.25rem;
+}
+.exp-company {
+  margin-top: 4px;
+  color: var(--accent);
+  font-weight: 500;
+}
+.exp-points {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.exp-points li {
+  font-size: 0.98rem;
+}
